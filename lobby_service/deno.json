@@ -1,0 +1,8 @@
+{
+  "imports": {
+    "hono": "https://deno.land/x/hono@v3.11.7/mod.ts"
+  },
+  "tasks": {
+    "dev": "deno run --allow-net --watch main.ts"
+  }
+}
