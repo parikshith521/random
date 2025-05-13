@@ -16,6 +16,7 @@ app.post("/api/lobby/enter", async (c) => {
   //ADD TO QUEUE
   await redis.rpush("Q_test", user_id);
 
+  console.log("LOBBY: ADDED TO QUEUE");
   return c.json({
     message: `added ${user_id} to queue`
   })
@@ -26,7 +27,7 @@ app.delete("/api/lobby/exit/:user_id", async (c) => {
 
   //REMOVE FROM QUEUE
   await redis.lrem("Q_test", 0, user_id)
-
+  console.log("LOBBY: REMOVED FROM QUEUE");
   return c.json({
     message: `removed ${user_id} from the queue`
   })
