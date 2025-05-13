@@ -1,0 +1,9 @@
+{
+    "imports": {
+        "@db/redis": "jsr:@db/redis@^0.40.0"
+    },
+    "tasks": {
+        "dev": "deno run --allow-net --watch main.ts"
+    }
+}
+  
